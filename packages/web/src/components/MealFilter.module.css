@@ -1,0 +1,40 @@
+.filterItem {
+  width: 100%;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.customCheckbox {
+  height: 36px;
+  width: 36px;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+}
+
+.label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-color);
+} 

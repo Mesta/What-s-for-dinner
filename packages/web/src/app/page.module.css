@@ -1,0 +1,50 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchSection {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 1rem;
+  border: 1px solid var(--button-border);
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  background-color: white;
+}
+
+.randomButton {
+  padding: 0 2rem;
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.filtersSection {
+  width: 100%;
+}
+
+.filtersSection h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.filtersList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+} 
