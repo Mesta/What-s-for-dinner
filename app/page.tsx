@@ -32,17 +32,25 @@ export default function Page() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <h1 className={styles.title}>What type of meal would you like?</h1>
-        
-        <form onSubmit={handleSubmit}>
+
+        <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.searchContainer}>
-            <input
-              type="text"
-              value={mealInput}
-              onChange={(e) => setMealInput(e.target.value)}
-              placeholder="Enter a dish..."
-              className={styles.searchInput}
-            />
+            <div className={styles.inputWithButton}>
+              <div className={styles.inputLabel}>In my frigde, there is...</div>
+              <input
+                type="text"
+                value={mealInput}
+                onChange={(e) => setMealInput(e.target.value)}
+                placeholder="a tomato!"
+                className={styles.searchInput}
+              />
+              <button 
+                type="submit" 
+                className={styles.submitButton}
+              >
+                Feed me!
+              </button>
+            </div>
             
             <button 
               type="button" 
