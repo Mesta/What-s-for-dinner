@@ -1,43 +1,4 @@
-import { NextResponse } from 'next/server';
-import OpenAI from 'openai';
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
-export async function POST(request: Request) {
-  try {
-    const { ingredient } = await request.json();
-    
-    if (!ingredient) {
-      return NextResponse.json({ error: 'Ingredient is required' }, { status: 400 });
-    }
-
-    const response = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
-      messages: [
-        {
-          role: "system",
-          content: "You are a helpful cooking assistant. Suggest a delicious meal based on the ingredient provided."
-        },
-        {
-          role: "user",
-          content: `I have ${ingredient} at home. What meal can I make for dinner tonight?`
-        }
-      ],
-      max_tokens: 300,
-    });
-
-    const suggestion = response.choices[0].message.content;
-    return NextResponse.json({ suggestion });
-  } catch (error) {
-    console.error('Error generating meal suggestion:', error);
-    return NextResponse.json(
-      { error: 'Failed to generate meal suggestion' },
-      { status: 500 }
-    );
-  }
-}# Welcome to Next.js
+# Welcome to Next.js
 
 This is the most minimal starter for your Next.js project.
 

@@ -1,0 +1,151 @@
+.main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: #f9f3e5; /* Beige background color */
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #2a5b6b; /* Teal color for the title */
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.searchContainer {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: #6b7280;
+}
+
+.searchInput::placeholder {
+  color: #94a3b8;
+}
+
+.randomButton {
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  background-color: #f5ebe0;
+  color: #2a5b6b;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.filtersSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.filtersTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2a5b6b;
+  margin-bottom: 0.5rem;
+}
+
+.filterItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.filterLabel {
+  font-size: 1.5rem;
+  color: #2a5b6b;
+  font-weight: 500;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 24rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.input {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.input:focus {
+  border-color: #15803d;
+  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.2);
+}
+
+.button {
+  padding: 0.75rem 1rem;
+  background-color: #16a34a;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.button:hover {
+  background-color: #15803d;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.5);
+} 
