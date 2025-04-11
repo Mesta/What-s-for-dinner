@@ -47,54 +47,38 @@ export default function Page() {
               <button 
                 type="submit" 
                 className={styles.submitButton}
+                aria-label="Submit"
               >
-                Feed me!
+                <svg className={styles.enterIcon} viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 9L6 15L18 15L18 13L21 16L18 19L18 17L3 17L3 9L6 9Z" fill="currentColor" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </button>
             </div>
-            
-            <button 
-              type="button" 
-              className={styles.randomButton}
-              onClick={handleRandomMeal}
-            >
-              Random
-            </button>
           </div>
           
           <div className={styles.filtersSection}>
-            <h2 className={styles.filtersTitle}>Filters</h2>
-            
-            <div className={styles.filterItem}>
-              <input
-                type="checkbox"
-                id="fastFood"
-                checked={filters.fastFood}
-                onChange={() => handleFilterChange('fastFood')}
-                className={styles.checkbox}
-              />
-              <label htmlFor="fastFood" className={styles.filterLabel}>Fast Food</label>
-            </div>
-            
-            <div className={styles.filterItem}>
-              <input
-                type="checkbox"
-                id="healthy"
-                checked={filters.healthy}
-                onChange={() => handleFilterChange('healthy')}
-                className={styles.checkbox}
-              />
-              <label htmlFor="healthy" className={styles.filterLabel}>Healthy</label>
-            </div>
-            
-            <div className={styles.filterItem}>
-              <input
-                type="checkbox"
-                id="quickToCook"
-                checked={filters.quickToCook}
-                onChange={() => handleFilterChange('quickToCook')}
-                className={styles.checkbox}
-              />
-              <label htmlFor="quickToCook" className={styles.filterLabel}>Quick to Cook</label>
+            <div className={styles.filtersList}>
+              <div className={styles.filterItem}>
+                <input
+                  type="checkbox"
+                  id="healthy"
+                  checked={filters.healthy}
+                  onChange={() => handleFilterChange('healthy')}
+                  className={styles.checkbox}
+                />
+                <label htmlFor="healthy" className={styles.filterLabel}>Healthy</label>
+              </div>
+              
+              <div className={styles.filterItem}>
+                <input
+                  type="checkbox"
+                  id="quickToCook"
+                  checked={filters.quickToCook}
+                  onChange={() => handleFilterChange('quickToCook')}
+                  className={styles.checkbox}
+                />
+                <label htmlFor="quickToCook" className={styles.filterLabel}>Quick to Cook</label>
+              </div>
             </div>
           </div>
         </form>
